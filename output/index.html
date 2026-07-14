@@ -9,279 +9,108 @@
   <link rel="canonical" href="https://hrtoolpick.com/">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --navy: #0d1b2a;
-      --navy-mid: #1a2f47;
-      --navy-light: #243b55;
-      --accent: #3b82f6;
-      --accent-light: #60a5fa;
-      --accent-muted: rgba(59,130,246,0.12);
-      --gold: #f59e0b;
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
-      --border: rgba(255,255,255,0.08);
-      --card-bg: rgba(255,255,255,0.04);
-      --card-hover: rgba(255,255,255,0.08);
-      --white: #ffffff;
-      --green: #10b981;
-      --radius: 10px;
+      --navy: #0d1b2a; --navy-mid: #1a2f47; --navy-light: #243b55;
+      --accent: #3b82f6; --accent-light: #60a5fa; --accent-muted: rgba(59,130,246,0.12);
+      --gold: #f59e0b; --text: #f1f5f9; --text-muted: #94a3b8; --text-dim: #64748b;
+      --border: rgba(255,255,255,0.08); --card-bg: rgba(255,255,255,0.04);
+      --card-hover: rgba(255,255,255,0.08); --white: #ffffff; --green: #10b981; --radius: 10px;
     }
-
     html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--navy); color: var(--text); line-height: 1.6; }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
-      background: var(--navy);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    /* ── HEADER ── */
-    .site-header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(13,27,42,0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-    }
-    .header-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 60px;
-    }
-    .logo {
-      font-size: 18px; font-weight: 800; text-decoration: none;
-      color: var(--white); letter-spacing: -0.3px;
-    }
+    /* HEADER */
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(13,27,42,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; }
+    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .logo { font-size: 18px; font-weight: 800; text-decoration: none; color: var(--white); }
     .logo span { color: var(--accent-light); }
     nav { display: flex; gap: 6px; align-items: center; }
-    nav a {
-      color: var(--text-muted); text-decoration: none;
-      font-size: 14px; padding: 6px 12px; border-radius: 6px;
-      transition: all 0.2s;
-    }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; padding: 6px 12px; border-radius: 6px; transition: all 0.2s; }
     nav a:hover { color: var(--text); background: var(--card-bg); }
-    .nav-cta {
-      background: var(--accent) !important; color: var(--white) !important;
-      font-weight: 600 !important;
-    }
+    .nav-cta { background: var(--accent) !important; color: var(--white) !important; font-weight: 600 !important; }
     .nav-cta:hover { background: #2563eb !important; }
 
-    /* ── HERO ── */
-    .hero {
-      max-width: 1100px; margin: 0 auto;
-      padding: 80px 24px 56px;
-      text-align: center;
-    }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--accent-muted); border: 1px solid rgba(59,130,246,0.25);
-      color: var(--accent-light); font-size: 13px; font-weight: 500;
-      padding: 5px 14px; border-radius: 20px; margin-bottom: 24px;
-    }
-    .hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-light); }
-    h1 {
-      font-size: clamp(32px, 5vw, 56px);
-      font-weight: 800; line-height: 1.1;
-      letter-spacing: -1.5px; margin-bottom: 20px;
-      color: var(--white);
-    }
+    /* HERO */
+    .hero { max-width: 1100px; margin: 0 auto; padding: 80px 24px 48px; text-align: center; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-muted); border: 1px solid rgba(59,130,246,0.25); color: var(--accent-light); font-size: 13px; font-weight: 500; padding: 5px 14px; border-radius: 20px; margin-bottom: 24px; }
+    .hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-light); display: inline-block; }
+    h1 { font-size: clamp(30px, 5vw, 54px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 20px; color: var(--white); }
     h1 em { font-style: normal; color: var(--accent-light); }
-    .hero-sub {
-      font-size: clamp(16px, 2vw, 19px);
-      color: var(--text-muted); max-width: 580px;
-      margin: 0 auto 40px; line-height: 1.7;
-    }
+    .hero-sub { font-size: clamp(15px, 2vw, 18px); color: var(--text-muted); max-width: 560px; margin: 0 auto 36px; line-height: 1.7; }
 
-    /* ── SEARCH BAR ── */
-    .search-wrap { max-width: 560px; margin: 0 auto 20px; position: relative; }
-    .search-wrap input {
-      width: 100%; padding: 16px 56px 16px 20px;
-      background: var(--navy-mid); border: 1.5px solid var(--border);
-      border-radius: 12px; color: var(--text); font-size: 15px;
-      outline: none; transition: border-color 0.2s;
-    }
+    /* SEARCH */
+    .search-wrap { max-width: 540px; margin: 0 auto 16px; position: relative; }
+    .search-wrap input { width: 100%; padding: 15px 52px 15px 20px; background: var(--navy-mid); border: 1.5px solid var(--border); border-radius: 12px; color: var(--text); font-size: 15px; outline: none; transition: border-color 0.2s; }
     .search-wrap input::placeholder { color: var(--text-dim); }
     .search-wrap input:focus { border-color: var(--accent); }
-    .search-icon {
-      position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
-      color: var(--text-dim); pointer-events: none; font-size: 18px;
-    }
+    .search-icon { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 18px; pointer-events: none; }
     .search-hint { font-size: 13px; color: var(--text-dim); text-align: center; }
     .search-hint a { color: var(--accent-light); text-decoration: none; }
 
-    /* ── STATS BAR ── */
-    .stats-bar {
-      max-width: 1100px; margin: 0 auto;
-      padding: 0 24px 56px;
-      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
-    }
+    /* STATS */
+    .stats-bar { max-width: 1100px; margin: 0 auto; padding: 0 24px 56px; display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
     .stat { text-align: center; }
-    .stat-num {
-      font-size: 28px; font-weight: 800;
-      color: var(--white); letter-spacing: -0.5px;
-      display: block;
-    }
+    .stat-num { font-size: 28px; font-weight: 800; color: var(--white); letter-spacing: -0.5px; display: block; }
     .stat-label { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
 
-    /* ── SECTION ── */
-    .section {
-      max-width: 1100px; margin: 0 auto;
-      padding: 0 24px 64px;
-    }
-    .section-header {
-      display: flex; align-items: baseline;
-      justify-content: space-between; margin-bottom: 24px;
-    }
-    .section-title {
-      font-size: 20px; font-weight: 700;
-      color: var(--white); letter-spacing: -0.3px;
-    }
-    .section-tag {
-      font-size: 12px; font-weight: 600; letter-spacing: 0.8px;
-      text-transform: uppercase; color: var(--text-dim);
-    }
+    /* SECTION */
+    .section { max-width: 1100px; margin: 0 auto; padding: 0 24px 64px; }
+    .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px; }
+    .section-title { font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: -0.3px; }
+    .section-tag { font-size: 12px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-dim); }
 
-    /* ── CATEGORY TABS ── */
-    .cat-tabs {
-      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px;
-    }
-    .cat-tab {
-      padding: 7px 16px; border-radius: 20px; cursor: pointer;
-      font-size: 13px; font-weight: 500; border: 1.5px solid var(--border);
-      background: transparent; color: var(--text-muted);
-      transition: all 0.2s;
-    }
+    /* TABS */
+    .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .cat-tab { padding: 7px 16px; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: 500; border: 1.5px solid var(--border); background: transparent; color: var(--text-muted); transition: all 0.2s; }
     .cat-tab:hover { border-color: var(--accent); color: var(--accent-light); }
-    .cat-tab.active {
-      background: var(--accent); border-color: var(--accent);
-      color: var(--white);
-    }
+    .cat-tab.active { background: var(--accent); border-color: var(--accent); color: var(--white); }
 
-    /* ── TOOL GRID ── */
-    .tool-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 14px;
-    }
-    .tool-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px;
-      transition: all 0.2s;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    .tool-card:hover {
-      background: var(--card-hover);
-      border-color: rgba(59,130,246,0.3);
-      transform: translateY(-2px);
-    }
-    .tool-card-top {
-      display: flex; align-items: flex-start;
-      justify-content: space-between; margin-bottom: 12px;
-    }
-    .tool-initial {
-      width: 40px; height: 40px; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px; font-weight: 800; color: var(--white);
-      flex-shrink: 0;
-    }
-    .tool-rating {
-      display: flex; align-items: center; gap: 4px;
-      font-size: 13px; font-weight: 600; color: var(--gold);
-    }
+    /* TOOL GRID */
+    .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+    .tool-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; transition: all 0.2s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+    .tool-card:hover { background: var(--card-hover); border-color: rgba(59,130,246,0.35); transform: translateY(-2px); }
+    .tool-card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
+    .tool-initial { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: var(--white); flex-shrink: 0; }
+    .tool-rating { display: flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: var(--gold); }
     .tool-rating span { color: var(--text-dim); font-weight: 400; }
-    .tool-name {
-      font-size: 16px; font-weight: 700;
-      color: var(--white); margin-bottom: 4px;
-    }
-    .tool-tagline {
-      font-size: 13px; color: var(--text-muted);
-      margin-bottom: 14px; line-height: 1.5;
-    }
-    .tool-meta {
-      display: flex; gap: 8px; flex-wrap: wrap;
-    }
-    .tool-badge {
-      font-size: 11px; font-weight: 500; padding: 3px 9px;
-      border-radius: 20px; border: 1px solid var(--border);
-      color: var(--text-dim);
-    }
+    .tool-name { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .tool-tagline { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
+    .tool-meta { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tool-badge { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 20px; border: 1px solid var(--border); color: var(--text-dim); }
     .tool-badge.green { color: var(--green); border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.08); }
     .tool-badge.blue { color: var(--accent-light); border-color: rgba(96,165,250,0.3); background: rgba(96,165,250,0.08); }
+    .tool-item.hidden { display: none; }
+    .no-results { text-align: center; padding: 40px; color: var(--text-dim); display: none; }
 
-    /* ── POPULAR COMPARISONS ── */
-    .compare-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 10px;
-    }
-    .compare-card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 14px 18px;
-      text-decoration: none; color: var(--text);
-      display: flex; align-items: center; justify-content: space-between;
-      transition: all 0.2s; font-size: 14px;
-    }
-    .compare-card:hover {
-      background: var(--card-hover);
-      border-color: rgba(59,130,246,0.3);
-      color: var(--accent-light);
-    }
+    /* COMPARE GRID */
+    .compare-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+    .compare-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 18px; text-decoration: none; color: var(--text); display: flex; align-items: center; justify-content: space-between; transition: all 0.2s; font-size: 14px; }
+    .compare-card:hover { background: var(--card-hover); border-color: rgba(59,130,246,0.3); color: var(--accent-light); }
     .compare-card-label { font-weight: 500; }
     .compare-arrow { color: var(--text-dim); font-size: 16px; }
 
-    /* ── HOW IT WORKS ── */
-    .how-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .how-card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 24px;
-    }
-    .how-num {
-      font-size: 11px; font-weight: 700; letter-spacing: 1px;
-      text-transform: uppercase; color: var(--accent-light);
-      margin-bottom: 12px;
-    }
+    /* HOW IT WORKS */
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .how-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+    .how-num { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 12px; }
     .how-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--white); }
     .how-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 40px 24px;
-      text-align: center;
-    }
-    footer .footer-inner {
-      max-width: 1100px; margin: 0 auto;
-    }
-    .footer-logo {
-      font-size: 16px; font-weight: 800;
-      color: var(--white); margin-bottom: 12px;
-    }
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-logo { font-size: 16px; font-weight: 800; color: var(--white); margin-bottom: 12px; }
     .footer-logo span { color: var(--accent-light); }
     .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
     .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 13px; }
     .footer-links a:hover { color: var(--text-muted); }
     .footer-copy { font-size: 12px; color: var(--text-dim); }
 
-    /* ── HIDDEN ── */
-    .tool-item { display: block; }
-    .tool-item.hidden { display: none; }
-
     @media (max-width: 700px) {
       .how-grid { grid-template-columns: 1fr; }
       .stats-bar { gap: 24px; }
       h1 { letter-spacing: -0.8px; }
+      nav a:not(.nav-cta) { display: none; }
     }
   </style>
 </head>
@@ -292,333 +121,228 @@
     <a class="logo" href="/">HR<span>ToolPick</span></a>
     <nav>
       <a href="#tools">All Tools</a>
-      <a href="#compare">Compare</a>
-      <a href="/compare/gusto-vs-deel/" class="nav-cta">Compare Now</a>
+      <a href="#compare">Comparisons</a>
+      <a href="#how" >How it works</a>
+      <a href="#tools" class="nav-cta">Find My Tool</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-eyebrow">Updated July 2026 · 30 tools reviewed</div>
+  <div class="hero-eyebrow">Updated July 2026 &middot; 30 tools reviewed</div>
   <h1>Find the right <em>HR software</em><br>for your business</h1>
   <p class="hero-sub">Side-by-side comparisons of payroll, HR, and global employment platforms. Built for teams that need a straight answer, not a sales pitch.</p>
-
   <div class="search-wrap">
     <input type="text" id="searchInput" placeholder="Search tools — try Gusto, Deel, Rippling..." oninput="filterTools(this.value)" autocomplete="off">
     <span class="search-icon">⌕</span>
   </div>
-  <p class="search-hint">Or <a href="#compare">browse popular comparisons →</a></p>
+  <p class="search-hint">Or <a href="#compare">browse popular comparisons ↓</a></p>
 </section>
 
 <div class="stats-bar">
   <div class="stat"><span class="stat-num">30</span><div class="stat-label">Tools reviewed</div></div>
   <div class="stat"><span class="stat-num">435</span><div class="stat-label">Comparison pages</div></div>
-  <div class="stat"><span class="stat-num">150+</span><div class="stat-label">Countries covered</div></div>
-  <div class="stat"><span class="stat-num">2026</span><div class="stat-label">Last updated</div></div>
+  <div class="stat"><span class="stat-num">180+</span><div class="stat-label">Countries covered</div></div>
+  <div class="stat"><span class="stat-num">July 2026</span><div class="stat-label">Last updated</div></div>
 </div>
 
 <!-- ALL TOOLS -->
 <section class="section" id="tools">
   <div class="section-header">
-    <h2 class="section-title">All HR & Payroll Tools</h2>
+    <h2 class="section-title">All HR &amp; Payroll Tools</h2>
     <span class="section-tag">30 tools</span>
   </div>
-
   <div class="cat-tabs">
-    <button class="cat-tab active" onclick="filterCat('all', this)">All</button>
-    <button class="cat-tab" onclick="filterCat('us-payroll', this)">US Payroll</button>
-    <button class="cat-tab" onclick="filterCat('global', this)">Global / EOR</button>
-    <button class="cat-tab" onclick="filterCat('hr-platform', this)">HR Platform</button>
-    <button class="cat-tab" onclick="filterCat('enterprise', this)">Enterprise</button>
+    <button class="cat-tab active" onclick="filterCat('all',this)">All</button>
+    <button class="cat-tab" onclick="filterCat('us-payroll',this)">US Payroll</button>
+    <button class="cat-tab" onclick="filterCat('global',this)">Global / EOR</button>
+    <button class="cat-tab" onclick="filterCat('hr-platform',this)">HR Platform</button>
+    <button class="cat-tab" onclick="filterCat('enterprise',this)">Enterprise</button>
   </div>
-
   <div class="tool-grid" id="toolGrid">
 
-    <!-- GUSTO -->
-    <a class="tool-card tool-item" href="/compare/gusto-vs-deel/" data-cat="us-payroll" data-name="gusto">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#f04e37;">G</div>
-        <div class="tool-rating">★ 4.5 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Gusto</div>
-      <div class="tool-tagline">Full-service payroll and HR for small businesses</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free trial</span>
-        <span class="tool-badge">$40/mo + $6/emp</span>
-        <span class="tool-badge blue">US only</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/gusto-vs-bamboohr/" data-cat="us-payroll" data-name="gusto">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#f04e37">G</div><div class="tool-rating">★ 4.5 <span>G2</span></div></div>
+      <div class="tool-name">Gusto</div><div class="tool-tagline">Full-service payroll and HR for small businesses</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge">$40/mo + $6/emp</span><span class="tool-badge blue">US only</span></div>
     </a>
 
-    <!-- DEEL -->
     <a class="tool-card tool-item" href="/compare/deel-vs-remote/" data-cat="global" data-name="deel">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#000;">D</div>
-        <div class="tool-rating">★ 4.7 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Deel</div>
-      <div class="tool-tagline">Global payroll and HR for remote teams in 150+ countries</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free plan</span>
-        <span class="tool-badge">From $49/mo</span>
-        <span class="tool-badge blue">150+ countries</span>
-      </div>
+      <div class="tool-card-top"><div class="tool-initial" style="background:#111">D</div><div class="tool-rating">★ 4.7 <span>G2</span></div></div>
+      <div class="tool-name">Deel</div><div class="tool-tagline">Global payroll and HR for remote teams in 150+ countries</div>
+      <div class="tool-meta"><span class="tool-badge green">Free plan</span><span class="tool-badge">From $49/emp</span><span class="tool-badge blue">150+ countries</span></div>
     </a>
 
-    <!-- RIPPLING -->
-    <a class="tool-card tool-item" href="/compare/rippling-vs-gusto/" data-cat="us-payroll" data-name="rippling">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#ff5c28;">R</div>
-        <div class="tool-rating">★ 4.8 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Rippling</div>
-      <div class="tool-tagline">HR, IT, and Finance unified on one platform</div>
-      <div class="tool-meta">
-        <span class="tool-badge">From $8/emp</span>
-        <span class="tool-badge blue">Global</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/gusto-vs-rippling/" data-cat="us-payroll" data-name="rippling">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#ff5c28">R</div><div class="tool-rating">★ 4.8 <span>G2</span></div></div>
+      <div class="tool-name">Rippling</div><div class="tool-tagline">HR, IT, and Finance unified on one platform</div>
+      <div class="tool-meta"><span class="tool-badge">From $8/emp</span><span class="tool-badge blue">Global</span></div>
     </a>
 
-    <!-- BAMBOOHR -->
     <a class="tool-card tool-item" href="/compare/bamboohr-vs-rippling/" data-cat="hr-platform" data-name="bamboohr">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#73ac39;">B</div>
-        <div class="tool-rating">★ 4.5 <span>G2</span></div>
-      </div>
-      <div class="tool-name">BambooHR</div>
-      <div class="tool-tagline">HR software built for small and medium businesses</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free trial</span>
-        <span class="tool-badge">From $10/emp</span>
-      </div>
+      <div class="tool-card-top"><div class="tool-initial" style="background:#73ac39">B</div><div class="tool-rating">★ 4.5 <span>G2</span></div></div>
+      <div class="tool-name">BambooHR</div><div class="tool-tagline">HR software built for small and medium businesses</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge">From $10/emp</span></div>
     </a>
 
-    <!-- REMOTE -->
-    <a class="tool-card tool-item" href="/compare/remote-vs-deel/" data-cat="global" data-name="remote">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#6c2bd9;">R</div>
-        <div class="tool-rating">★ 4.5 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Remote</div>
-      <div class="tool-tagline">Global HR platform for distributed teams in 170+ countries</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free plan</span>
-        <span class="tool-badge">From $29/emp</span>
-        <span class="tool-badge blue">170+ countries</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/deel-vs-remote/" data-cat="global" data-name="remote">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#6c2bd9">R</div><div class="tool-rating">★ 4.5 <span>G2</span></div></div>
+      <div class="tool-name">Remote</div><div class="tool-tagline">Global HR platform for distributed teams in 170+ countries</div>
+      <div class="tool-meta"><span class="tool-badge green">Free plan</span><span class="tool-badge">From $29/emp</span><span class="tool-badge blue">170+ countries</span></div>
     </a>
 
-    <!-- ADP WORKFORCE NOW -->
     <a class="tool-card tool-item" href="/compare/adp-workforce-now-vs-paychex-flex/" data-cat="enterprise" data-name="adp workforce now">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#d0021b;">A</div>
-        <div class="tool-rating">★ 4.1 <span>G2</span></div>
-      </div>
-      <div class="tool-name">ADP Workforce Now</div>
-      <div class="tool-tagline">Enterprise-grade HR and payroll for 50+ employees</div>
-      <div class="tool-meta">
-        <span class="tool-badge">Custom pricing</span>
-        <span class="tool-badge blue">50+ countries</span>
-      </div>
+      <div class="tool-card-top"><div class="tool-initial" style="background:#d0021b">A</div><div class="tool-rating">★ 4.1 <span>G2</span></div></div>
+      <div class="tool-name">ADP Workforce Now</div><div class="tool-tagline">Enterprise-grade HR and payroll for 50+ employees</div>
+      <div class="tool-meta"><span class="tool-badge">Custom pricing</span><span class="tool-badge blue">50+ countries</span></div>
     </a>
 
-    <!-- PAYCHEX -->
-    <a class="tool-card tool-item" href="/compare/paychex-flex-vs-gusto/" data-cat="us-payroll" data-name="paychex flex">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#005baa;">P</div>
-        <div class="tool-rating">★ 4.2 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Paychex Flex</div>
-      <div class="tool-tagline">Payroll, HR and benefits for businesses of all sizes</div>
-      <div class="tool-meta">
-        <span class="tool-badge">From $39/mo</span>
-        <span class="tool-badge blue">US only</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/gusto-vs-paychex-flex/" data-cat="us-payroll" data-name="paychex flex">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#005baa">P</div><div class="tool-rating">★ 4.2 <span>G2</span></div></div>
+      <div class="tool-name">Paychex Flex</div><div class="tool-tagline">Payroll, HR and benefits for businesses of all sizes</div>
+      <div class="tool-meta"><span class="tool-badge">From $39/mo</span><span class="tool-badge blue">US only</span></div>
     </a>
 
-    <!-- JUSTWORKS -->
-    <a class="tool-card tool-item" href="/compare/justworks-vs-gusto/" data-cat="us-payroll" data-name="justworks">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#1f4aab;">J</div>
-        <div class="tool-rating">★ 4.6 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Justworks</div>
-      <div class="tool-tagline">PEO payroll and Fortune 500 benefits for small teams</div>
-      <div class="tool-meta">
-        <span class="tool-badge">From $59/emp</span>
-        <span class="tool-badge blue">US only</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/gusto-vs-justworks/" data-cat="us-payroll" data-name="justworks">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#1f4aab">J</div><div class="tool-rating">★ 4.6 <span>G2</span></div></div>
+      <div class="tool-name">Justworks</div><div class="tool-tagline">PEO payroll and Fortune 500 benefits for small teams</div>
+      <div class="tool-meta"><span class="tool-badge">From $59/emp</span><span class="tool-badge blue">US only</span></div>
     </a>
 
-    <!-- PAYCOM -->
     <a class="tool-card tool-item" href="/compare/paycom-vs-paycor/" data-cat="us-payroll" data-name="paycom">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#00a550;">P</div>
-        <div class="tool-rating">★ 4.4 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Paycom</div>
-      <div class="tool-tagline">Single software for the entire employee lifecycle</div>
-      <div class="tool-meta">
-        <span class="tool-badge">Custom pricing</span>
-        <span class="tool-badge blue">US only</span>
-      </div>
+      <div class="tool-card-top"><div class="tool-initial" style="background:#00a550">P</div><div class="tool-rating">★ 4.4 <span>G2</span></div></div>
+      <div class="tool-name">Paycom</div><div class="tool-tagline">Single software for the entire employee lifecycle</div>
+      <div class="tool-meta"><span class="tool-badge">Custom pricing</span><span class="tool-badge blue">US only</span></div>
     </a>
 
-    <!-- PAYCOR -->
-    <a class="tool-card tool-item" href="/compare/paycor-vs-paycom/" data-cat="us-payroll" data-name="paycor">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#e31937;">P</div>
-        <div class="tool-rating">★ 4.4 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Paycor</div>
-      <div class="tool-tagline">HR and payroll software built for leaders</div>
-      <div class="tool-meta">
-        <span class="tool-badge">From $99/mo</span>
-        <span class="tool-badge blue">US only</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/paycom-vs-paycor/" data-cat="us-payroll" data-name="paycor">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#e31937">P</div><div class="tool-rating">★ 4.4 <span>G2</span></div></div>
+      <div class="tool-name">Paycor</div><div class="tool-tagline">HR and payroll software built for leaders</div>
+      <div class="tool-meta"><span class="tool-badge">From $99/mo</span><span class="tool-badge blue">US only</span></div>
     </a>
 
-    <!-- WORKDAY -->
-    <a class="tool-card tool-item" href="/compare/workday-hcm-vs-ukg-pro/" data-cat="enterprise" data-name="workday hcm">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#f36e21;">W</div>
-        <div class="tool-rating">★ 4.0 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Workday HCM</div>
-      <div class="tool-tagline">Finance and HR unified for large enterprises</div>
-      <div class="tool-meta">
-        <span class="tool-badge">Custom pricing</span>
-        <span class="tool-badge blue">100+ countries</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/ukg-pro-vs-workday-hcm/" data-cat="enterprise" data-name="workday hcm">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#f36e21">W</div><div class="tool-rating">★ 4.0 <span>G2</span></div></div>
+      <div class="tool-name">Workday HCM</div><div class="tool-tagline">Finance and HR unified for large enterprises</div>
+      <div class="tool-meta"><span class="tool-badge">Custom pricing</span><span class="tool-badge blue">100+ countries</span></div>
     </a>
 
-    <!-- UKG PRO -->
     <a class="tool-card tool-item" href="/compare/ukg-pro-vs-ceridian-dayforce/" data-cat="enterprise" data-name="ukg pro">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#005f9e;">U</div>
-        <div class="tool-rating">★ 4.2 <span>G2</span></div>
-      </div>
-      <div class="tool-name">UKG Pro</div>
-      <div class="tool-tagline">Complete HCM suite for complex workforce needs</div>
-      <div class="tool-meta">
-        <span class="tool-badge">Custom pricing</span>
-        <span class="tool-badge blue">50+ countries</span>
-      </div>
+      <div class="tool-card-top"><div class="tool-initial" style="background:#005f9e">U</div><div class="tool-rating">★ 4.2 <span>G2</span></div></div>
+      <div class="tool-name">UKG Pro</div><div class="tool-tagline">Complete HCM suite for complex workforce needs</div>
+      <div class="tool-meta"><span class="tool-badge">Custom pricing</span><span class="tool-badge blue">50+ countries</span></div>
     </a>
 
-    <!-- HIBOB -->
-    <a class="tool-card tool-item" href="/compare/hibob-vs-bamboohr/" data-cat="hr-platform" data-name="hibob">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#7c3aed;">H</div>
-        <div class="tool-rating">★ 4.5 <span>G2</span></div>
-      </div>
-      <div class="tool-name">HiBob</div>
-      <div class="tool-tagline">Modern HR platform for modern businesses</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free trial</span>
-        <span class="tool-badge">From $8/emp</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/adp-workforce-now-vs-ceridian-dayforce/" data-cat="enterprise" data-name="ceridian dayforce">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#0072ce">C</div><div class="tool-rating">★ 4.2 <span>G2</span></div></div>
+      <div class="tool-name">Ceridian Dayforce</div><div class="tool-tagline">Real-time HCM platform for a changing workforce</div>
+      <div class="tool-meta"><span class="tool-badge">Custom pricing</span><span class="tool-badge blue">40+ countries</span></div>
     </a>
 
-    <!-- PERSONIO -->
-    <a class="tool-card tool-item" href="/compare/personio-vs-hibob/" data-cat="hr-platform" data-name="personio">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#1a56db;">P</div>
-        <div class="tool-rating">★ 4.3 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Personio</div>
-      <div class="tool-tagline">All-in-one HR software built for European businesses</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free trial</span>
-        <span class="tool-badge blue">15+ EU countries</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/bamboohr-vs-hibob/" data-cat="hr-platform" data-name="hibob">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#7c3aed">H</div><div class="tool-rating">★ 4.5 <span>G2</span></div></div>
+      <div class="tool-name">HiBob</div><div class="tool-tagline">Modern HR platform for modern businesses</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge">From $8/emp</span></div>
     </a>
 
-    <!-- ONPAY -->
-    <a class="tool-card tool-item" href="/compare/onpay-vs-gusto/" data-cat="us-payroll" data-name="onpay">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#2563eb;">O</div>
-        <div class="tool-rating">★ 4.8 <span>G2</span></div>
-      </div>
-      <div class="tool-name">OnPay</div>
-      <div class="tool-tagline">Simple, accurate payroll with the highest SMB ratings</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free trial</span>
-        <span class="tool-badge">$40/mo + $6/emp</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/hibob-vs-personio/" data-cat="hr-platform" data-name="personio">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#1a56db">P</div><div class="tool-rating">★ 4.3 <span>G2</span></div></div>
+      <div class="tool-name">Personio</div><div class="tool-tagline">All-in-one HR software built for European businesses</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge blue">15+ EU countries</span></div>
     </a>
 
-    <!-- MULTIPLIER -->
-    <a class="tool-card tool-item" href="/compare/multiplier-vs-deel/" data-cat="global" data-name="multiplier">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#0ea5e9;">M</div>
-        <div class="tool-rating">★ 4.7 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Multiplier</div>
-      <div class="tool-tagline">Simplify global employment for your remote team</div>
-      <div class="tool-meta">
-        <span class="tool-badge">From $40/emp</span>
-        <span class="tool-badge blue">150+ countries</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/personio-vs-factorial/" data-cat="hr-platform" data-name="factorial hr">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#059669">F</div><div class="tool-rating">★ 4.4 <span>G2</span></div></div>
+      <div class="tool-name">Factorial HR</div><div class="tool-tagline">Simple HR software for small and medium businesses</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge">From €5/emp</span></div>
     </a>
 
-    <!-- OYSTER HR -->
-    <a class="tool-card tool-item" href="/compare/oyster-hr-vs-deel/" data-cat="global" data-name="oyster hr">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#0d9488;">O</div>
-        <div class="tool-rating">★ 4.4 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Oyster HR</div>
-      <div class="tool-tagline">Hire and pay talent anywhere — 180+ countries</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free plan</span>
-        <span class="tool-badge blue">180+ countries</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/gusto-vs-onpay/" data-cat="us-payroll" data-name="onpay">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#2563eb">O</div><div class="tool-rating">★ 4.8 <span>G2</span></div></div>
+      <div class="tool-name">OnPay</div><div class="tool-tagline">Simple, accurate payroll with the highest SMB ratings</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge">$40/mo + $6/emp</span></div>
     </a>
 
-    <!-- QUICKBOOKS PAYROLL -->
-    <a class="tool-card tool-item" href="/compare/quickbooks-payroll-vs-gusto/" data-cat="us-payroll" data-name="quickbooks payroll">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#2ca01c;">Q</div>
-        <div class="tool-rating">★ 4.2 <span>G2</span></div>
-      </div>
-      <div class="tool-name">QuickBooks Payroll</div>
-      <div class="tool-tagline">Payroll built right into QuickBooks accounting</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free trial</span>
-        <span class="tool-badge">$45/mo + $6/emp</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/gusto-vs-adp-run/" data-cat="us-payroll" data-name="adp run">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#b91c1c">A</div><div class="tool-rating">★ 4.5 <span>G2</span></div></div>
+      <div class="tool-name">ADP RUN</div><div class="tool-tagline">Payroll and HR for small businesses from a trusted brand</div>
+      <div class="tool-meta"><span class="tool-badge">From $59/mo</span><span class="tool-badge blue">US only</span></div>
     </a>
 
-    <!-- ZOHO PEOPLE -->
-    <a class="tool-card tool-item" href="/compare/zoho-people-vs-bamboohr/" data-cat="hr-platform" data-name="zoho people">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#e42527;">Z</div>
-        <div class="tool-rating">★ 4.4 <span>G2</span></div>
-      </div>
-      <div class="tool-name">Zoho People</div>
-      <div class="tool-tagline">Comprehensive HR software with a generous free plan</div>
-      <div class="tool-meta">
-        <span class="tool-badge green">Free plan</span>
-        <span class="tool-badge">From $1/emp</span>
-        <span class="tool-badge blue">50+ countries</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/deel-vs-multiplier/" data-cat="global" data-name="multiplier">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#0ea5e9">M</div><div class="tool-rating">★ 4.7 <span>G2</span></div></div>
+      <div class="tool-name">Multiplier</div><div class="tool-tagline">Simplify global employment for your remote team</div>
+      <div class="tool-meta"><span class="tool-badge">From $40/emp</span><span class="tool-badge blue">150+ countries</span></div>
     </a>
 
-    <!-- REMOFIRST -->
-    <a class="tool-card tool-item" href="/compare/remofirst-vs-deel/" data-cat="global" data-name="remofirst">
-      <div class="tool-card-top">
-        <div class="tool-initial" style="background:#8b5cf6;">R</div>
-        <div class="tool-rating">★ 4.6 <span>G2</span></div>
-      </div>
-      <div class="tool-name">RemoFirst</div>
-      <div class="tool-tagline">The most affordable global EOR — from $199/employee</div>
-      <div class="tool-meta">
-        <span class="tool-badge">From $25/emp</span>
-        <span class="tool-badge blue">180+ countries</span>
-      </div>
+    <a class="tool-card tool-item" href="/compare/deel-vs-oyster-hr/" data-cat="global" data-name="oyster hr">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#0d9488">O</div><div class="tool-rating">★ 4.4 <span>G2</span></div></div>
+      <div class="tool-name">Oyster HR</div><div class="tool-tagline">Hire and pay talent anywhere — 180+ countries</div>
+      <div class="tool-meta"><span class="tool-badge green">Free plan</span><span class="tool-badge blue">180+ countries</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/deel-vs-papaya-global/" data-cat="global" data-name="papaya global">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#7c3aed">P</div><div class="tool-rating">★ 4.4 <span>G2</span></div></div>
+      <div class="tool-name">Papaya Global</div><div class="tool-tagline">Automated global payroll for enterprise teams</div>
+      <div class="tool-meta"><span class="tool-badge">From $25/emp</span><span class="tool-badge blue">160+ countries</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/gusto-vs-quickbooks-payroll/" data-cat="us-payroll" data-name="quickbooks payroll">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#2ca01c">Q</div><div class="tool-rating">★ 4.2 <span>G2</span></div></div>
+      <div class="tool-name">QuickBooks Payroll</div><div class="tool-tagline">Payroll built right into QuickBooks accounting</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge">$45/mo + $6/emp</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/bamboohr-vs-zoho-people/" data-cat="hr-platform" data-name="zoho people">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#e42527">Z</div><div class="tool-rating">★ 4.4 <span>G2</span></div></div>
+      <div class="tool-name">Zoho People</div><div class="tool-tagline">Comprehensive HR software with a generous free plan</div>
+      <div class="tool-meta"><span class="tool-badge green">Free plan</span><span class="tool-badge">From $1/emp</span><span class="tool-badge blue">50+ countries</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/deel-vs-remofirst/" data-cat="global" data-name="remofirst">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#8b5cf6">R</div><div class="tool-rating">★ 4.6 <span>G2</span></div></div>
+      <div class="tool-name">RemoFirst</div><div class="tool-tagline">The most affordable global EOR — from $199/employee</div>
+      <div class="tool-meta"><span class="tool-badge">From $25/emp</span><span class="tool-badge blue">180+ countries</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/gusto-vs-zenefits/" data-cat="hr-platform" data-name="zenefits">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#f59e0b">Z</div><div class="tool-rating">★ 4.0 <span>G2</span></div></div>
+      <div class="tool-name">Zenefits</div><div class="tool-tagline">HR, benefits, and payroll for small businesses</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge">From $10/emp</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/bamboohr-vs-namely/" data-cat="hr-platform" data-name="namely">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#0891b2">N</div><div class="tool-rating">★ 3.9 <span>G2</span></div></div>
+      <div class="tool-name">Namely</div><div class="tool-tagline">Mid-market HR software people actually love</div>
+      <div class="tool-meta"><span class="tool-badge">From $12/emp</span><span class="tool-badge blue">US only</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/bamboohr-vs-sage-hr/" data-cat="hr-platform" data-name="sage hr">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#00b050">S</div><div class="tool-rating">★ 4.4 <span>G2</span></div></div>
+      <div class="tool-name">Sage HR</div><div class="tool-tagline">Smart HR software for small to medium businesses</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge">From $5/emp</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/gusto-vs-square-payroll/" data-cat="us-payroll" data-name="square payroll">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#111">S</div><div class="tool-rating">★ 4.4 <span>G2</span></div></div>
+      <div class="tool-name">Square Payroll</div><div class="tool-tagline">Easy payroll for small businesses using Square</div>
+      <div class="tool-meta"><span class="tool-badge green">Free trial</span><span class="tool-badge">$35/mo + $6/emp</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/gusto-vs-wave-payroll/" data-cat="us-payroll" data-name="wave payroll">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#0056d2">W</div><div class="tool-rating">★ 4.1 <span>G2</span></div></div>
+      <div class="tool-name">Wave Payroll</div><div class="tool-tagline">Affordable payroll paired with free Wave accounting</div>
+      <div class="tool-meta"><span class="tool-badge">$20/mo + $6/emp</span><span class="tool-badge blue">US &amp; CA</span></div>
+    </a>
+
+    <a class="tool-card tool-item" href="/compare/gusto-vs-trinet-hr/" data-cat="us-payroll" data-name="trinet hr">
+      <div class="tool-card-top"><div class="tool-initial" style="background:#e11d48">T</div><div class="tool-rating">★ 3.9 <span>G2</span></div></div>
+      <div class="tool-name">TriNet HR</div><div class="tool-tagline">Full-service PEO and HR platform for SMBs</div>
+      <div class="tool-meta"><span class="tool-badge">Custom pricing</span><span class="tool-badge blue">US only</span></div>
     </a>
 
   </div>
+  <div class="no-results" id="noResults">No tools found. Try a different search term.</div>
 </section>
 
 <!-- POPULAR COMPARISONS -->
@@ -630,21 +354,25 @@
   <div class="compare-grid">
     <a class="compare-card" href="/compare/gusto-vs-bamboohr/"><span class="compare-card-label">Gusto vs BambooHR</span><span class="compare-arrow">→</span></a>
     <a class="compare-card" href="/compare/deel-vs-remote/"><span class="compare-card-label">Deel vs Remote</span><span class="compare-arrow">→</span></a>
-    <a class="compare-card" href="/compare/rippling-vs-gusto/"><span class="compare-card-label">Rippling vs Gusto</span><span class="compare-arrow">→</span></a>
     <a class="compare-card" href="/compare/gusto-vs-rippling/"><span class="compare-card-label">Gusto vs Rippling</span><span class="compare-arrow">→</span></a>
-    <a class="compare-card" href="/compare/deel-vs-multiplier/"><span class="compare-card-label">Deel vs Multiplier</span><span class="compare-arrow">→</span></a>
     <a class="compare-card" href="/compare/bamboohr-vs-hibob/"><span class="compare-card-label">BambooHR vs HiBob</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/deel-vs-multiplier/"><span class="compare-card-label">Deel vs Multiplier</span><span class="compare-arrow">→</span></a>
     <a class="compare-card" href="/compare/adp-workforce-now-vs-paychex-flex/"><span class="compare-card-label">ADP vs Paychex Flex</span><span class="compare-arrow">→</span></a>
     <a class="compare-card" href="/compare/gusto-vs-onpay/"><span class="compare-card-label">Gusto vs OnPay</span><span class="compare-arrow">→</span></a>
-    <a class="compare-card" href="/compare/workday-hcm-vs-ukg-pro/"><span class="compare-card-label">Workday vs UKG Pro</span><span class="compare-arrow">→</span></a>
-    <a class="compare-card" href="/compare/remote-vs-oyster-hr/"><span class="compare-card-label">Remote vs Oyster HR</span><span class="compare-arrow">→</span></a>
-    <a class="compare-card" href="/compare/quickbooks-payroll-vs-gusto/"><span class="compare-card-label">QuickBooks vs Gusto</span><span class="compare-arrow">→</span></a>
-    <a class="compare-card" href="/compare/personio-vs-bamboohr/"><span class="compare-card-label">Personio vs BambooHR</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/ukg-pro-vs-workday-hcm/"><span class="compare-card-label">UKG Pro vs Workday</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/deel-vs-oyster-hr/"><span class="compare-card-label">Deel vs Oyster HR</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/gusto-vs-quickbooks-payroll/"><span class="compare-card-label">Gusto vs QuickBooks</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/bamboohr-vs-personio/"><span class="compare-card-label">BambooHR vs Personio</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/paycom-vs-paycor/"><span class="compare-card-label">Paycom vs Paycor</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/gusto-vs-justworks/"><span class="compare-card-label">Gusto vs Justworks</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/deel-vs-remofirst/"><span class="compare-card-label">Deel vs RemoFirst</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/bamboohr-vs-zoho-people/"><span class="compare-card-label">BambooHR vs Zoho People</span><span class="compare-arrow">→</span></a>
+    <a class="compare-card" href="/compare/ukg-pro-vs-ceridian-dayforce/"><span class="compare-card-label">UKG Pro vs Ceridian</span><span class="compare-arrow">→</span></a>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="section">
+<section class="section" id="how">
   <div class="section-header">
     <h2 class="section-title">How HRToolPick works</h2>
   </div>
@@ -652,17 +380,17 @@
     <div class="how-card">
       <div class="how-num">Step 01</div>
       <div class="how-title">We gather the data</div>
-      <div class="how-desc">Pricing, features, G2 and Capterra ratings, integration lists — sourced directly from each vendor and verified platforms.</div>
+      <div class="how-desc">Pricing, features, G2 and Capterra ratings, integration lists — sourced directly from each vendor and verified review platforms. Updated monthly.</div>
     </div>
     <div class="how-card">
       <div class="how-num">Step 02</div>
       <div class="how-title">You compare side by side</div>
-      <div class="how-desc">Every comparison page shows a feature matrix, pros and cons, real ratings, and clear verdict based on your use case.</div>
+      <div class="how-desc">Every comparison page shows a full feature matrix, pros and cons, real user ratings, and a clear verdict based on your use case and team size.</div>
     </div>
     <div class="how-card">
       <div class="how-num">Step 03</div>
       <div class="how-title">You pick with confidence</div>
-      <div class="how-desc">No vendor bias. No paid placements. Just the information you need to make the right call for your team.</div>
+      <div class="how-desc">No vendor bias. No paid placements influencing our rankings. Just the data you need to make the right call for your team.</div>
     </div>
   </div>
 </section>
@@ -671,32 +399,41 @@
   <div class="footer-inner">
     <div class="footer-logo">HR<span>ToolPick</span></div>
     <div class="footer-links">
-      <a href="/compare/gusto-vs-bamboohr/">Compare Tools</a>
       <a href="#tools">All Tools</a>
+      <a href="#compare">Comparisons</a>
       <a href="/disclosure/">Affiliate Disclosure</a>
       <a href="/privacy/">Privacy Policy</a>
     </div>
-    <p class="footer-copy">© 2026 HRToolPick · We may earn a commission if you purchase through our links, at no extra cost to you. · Data updated July 2026.</p>
+    <p class="footer-copy">© 2026 HRToolPick &middot; We may earn a commission if you purchase through our links, at no extra cost to you. Data updated July 2026.</p>
   </div>
 </footer>
 
 <script>
-function filterTools(query) {
-  const q = query.toLowerCase().trim();
-  document.querySelectorAll('.tool-item').forEach(card => {
-    const name = card.dataset.name || '';
-    card.classList.toggle('hidden', q.length > 0 && !name.includes(q));
-  });
-}
+  function filterTools(query) {
+    var q = query.toLowerCase().trim();
+    var items = document.querySelectorAll('.tool-item');
+    var visible = 0;
+    items.forEach(function(card) {
+      var name = (card.dataset.name || '').toLowerCase();
+      var show = q.length === 0 || name.indexOf(q) !== -1;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    document.getElementById('noResults').style.display = (visible === 0 && q.length > 0) ? 'block' : 'none';
+  }
 
-function filterCat(cat, btn) {
-  document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.tool-item').forEach(card => {
-    card.classList.toggle('hidden', cat !== 'all' && card.dataset.cat !== cat);
-  });
-  document.getElementById('searchInput').value = '';
-}
+  function filterCat(cat, btn) {
+    document.querySelectorAll('.cat-tab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+    var visible = 0;
+    document.querySelectorAll('.tool-item').forEach(function(card) {
+      var show = cat === 'all' || card.dataset.cat === cat;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    document.getElementById('searchInput').value = '';
+    document.getElementById('noResults').style.display = 'none';
+  }
 </script>
 
 </body>
