@@ -258,7 +258,7 @@ def generate_all_pages(tools):
                      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for slug in generated:
         sitemap_lines.append(
-            f'  <url><loc>https://yoursite.com/compare/{slug}/</loc>'
+            f'  <url><loc>https://hrtoolpick.com/compare/{slug}/</loc>'
             f'<lastmod>{CURRENT_YEAR}-{MONTH_NUM}-01</lastmod>'
             f'<changefreq>monthly</changefreq><priority>0.8</priority></url>'
         )
