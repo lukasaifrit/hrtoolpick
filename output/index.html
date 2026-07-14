@@ -127,10 +127,63 @@
     .footer-copy { font-size: 12px; color: var(--text-dim); }
 
     @media (max-width: 700px) {
-      .how-grid { grid-template-columns: 1fr; }
-      .stats-bar { gap: 24px; }
-      h1 { letter-spacing: -0.8px; }
+      /* Header */
       nav a:not(.nav-cta) { display: none; }
+      .logo { font-size: 16px; }
+
+      /* Hero */
+      .hero { padding: 48px 16px 32px; }
+      h1 { font-size: 28px; letter-spacing: -0.8px; }
+      .hero-sub { font-size: 15px; margin-bottom: 24px; }
+      .hero-eyebrow { font-size: 12px; }
+
+      /* Picker — stack vertically on mobile */
+      .picker-wrap { padding: 16px; }
+      .picker-label { font-size: 12px; margin-bottom: 10px; }
+      .picker-row { flex-direction: column; gap: 8px; }
+      .picker-select { width: 100%; min-width: unset; font-size: 15px; padding: 13px 36px 13px 14px; }
+      .picker-vs { text-align: center; padding: 2px 0; }
+      .picker-btn { width: 100%; padding: 14px; font-size: 15px; border-radius: 10px; }
+      .picker-or { margin: 16px 0 12px; }
+
+      /* Search */
+      .search-wrap { padding: 0 4px; }
+      .search-wrap input { font-size: 15px; padding: 13px 44px 13px 16px; }
+
+      /* Stats */
+      .stats-bar { gap: 16px; padding: 0 16px 40px; }
+      .stat-num { font-size: 22px; }
+      .stat-label { font-size: 12px; }
+
+      /* Section */
+      .section { padding: 0 16px 48px; }
+      .section-title { font-size: 18px; }
+
+      /* Category tabs */
+      .cat-tabs { gap: 6px; }
+      .cat-tab { padding: 6px 12px; font-size: 12px; }
+
+      /* Tool grid — single column */
+      .tool-grid { grid-template-columns: 1fr; gap: 10px; }
+      .tool-name { font-size: 15px; }
+      .tool-tagline { font-size: 13px; margin-bottom: 10px; }
+
+      /* Compare grid — single column */
+      .compare-grid { grid-template-columns: 1fr; gap: 8px; }
+      .compare-card { font-size: 13px; padding: 12px 14px; }
+
+      /* How it works */
+      .how-grid { grid-template-columns: 1fr; gap: 12px; }
+      .how-card { padding: 18px; }
+
+      /* Footer */
+      .footer-links { gap: 12px; }
+    }
+
+    @media (max-width: 380px) {
+      h1 { font-size: 24px; }
+      .picker-btn { font-size: 14px; }
+      .stat-num { font-size: 20px; }
     }
   </style>
 </head>

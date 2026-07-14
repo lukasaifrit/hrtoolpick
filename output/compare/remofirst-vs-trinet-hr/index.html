@@ -102,8 +102,49 @@
     footer { background: #1a1a2e; color: #aaa; padding: 30px 0; text-align: center; font-size: 13px; }
     footer a { color: #aaa; }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+      /* Header */
+      nav a:not(:last-child) { display: none; }
+
+      /* Hero */
+      .hero { padding: 40px 16px 32px; }
+      .hero h1 { font-size: clamp(22px, 6vw, 32px); }
+      .hero p { font-size: 15px; }
+
+      /* Grids — single column */
       .score-grid, .proscons-grid, .cta-grid { grid-template-columns: 1fr; }
+
+      /* Table — make scrollable */
+      .compare-section { overflow-x: auto; }
+      .compare-table { min-width: 480px; }
+      .compare-table th, .compare-table td { padding: 10px 12px; font-size: 13px; }
+
+      /* Winner section */
+      .winner-row { flex-direction: column; gap: 8px; }
+
+      /* CTA buttons */
+      .cta-btn { padding: 14px 16px; font-size: 14px; }
+
+      /* FAQ */
+      .faq-item { padding: 14px 16px; }
+      .faq-item h3 { font-size: 14px; }
+      .faq-item p { font-size: 13px; }
+
+      /* Container padding */
+      .container { padding: 0 16px; }
+
+      /* Verdict bar */
+      .verdict-bar { margin: 20px 0; padding: 14px 16px; font-size: 14px; }
+
+      /* Section headings */
+      .score-section h2, .compare-section h2,
+      .proscons-section h2, .winner-section h2,
+      .faq-section h2 { font-size: 18px; }
+    }
+
+    @media (max-width: 380px) {
+      .hero h1 { font-size: 20px; }
+      .score-card { padding: 16px; }
     }
   </style>
 
