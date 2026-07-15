@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ tool_a.name }} vs {{ tool_b.name }} ({{ year }}) — Which Is Better for Your Business?</title>
-  <meta name="description" content="Compare {{ tool_a.name }} and {{ tool_b.name }} side by side. Pricing, features, ratings, and who should use each. Updated {{ month }} {{ year }}.">
+  <meta name="description" content="{{ tool_a.name }} vs {{ tool_b.name }}: Compare pricing, features, ratings, and real user reviews. Find out which HR and payroll software is right for your business size and budget. Updated {{ month }} {{ year }}.">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png">
@@ -158,6 +158,20 @@
     "author": { "@type": "Organization", "name": "HRToolPick" }
   }
   </script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ tool_a.name }} vs {{ tool_b.name }} ({{ year }}) — Which Is Better?">
+  <meta property="og:description" content="Compare {{ tool_a.name }} and {{ tool_b.name }} side by side. Pricing, features, ratings, and real verdict. Updated {{ month }} {{ year }}.">
+  <meta property="og:url" content="https://hrtoolpick.com/compare/{{ tool_a.slug }}-vs-{{ tool_b.slug }}/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HRToolPick">
+  <meta property="og:image" content="https://hrtoolpick.com/icons/icon-512.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ tool_a.name }} vs {{ tool_b.name }} ({{ year }})">
+  <meta name="twitter:description" content="Compare {{ tool_a.name }} and {{ tool_b.name }}: pricing, features, ratings. Find which HR software fits your business.">
+  <meta name="twitter:image" content="https://hrtoolpick.com/icons/icon-512.png">
 </head>
 <body>
 
@@ -312,6 +326,21 @@
     {% endfor %}
   </section>
 
+  <!-- RELATED COMPARISONS -->
+  <section class="faq-section" style="padding-bottom: 0;">
+    <h2>Related Comparisons</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-top: 16px;">
+      {% set related_a = [] %}
+      {% for tool in [tool_a, tool_b] %}
+      {% endfor %}
+      <a href="/compare/{{ tool_a.slug }}-vs-rippling/" style="display:block; padding: 12px 16px; background: #f8f9fb; border: 1px solid #e8eaed; border-radius: 8px; text-decoration: none; color: #1a1a2e; font-size: 14px; font-weight: 500; transition: all 0.2s;">{{ tool_a.name }} vs Rippling</a>
+      <a href="/compare/{{ tool_b.slug }}-vs-gusto/" style="display:block; padding: 12px 16px; background: #f8f9fb; border: 1px solid #e8eaed; border-radius: 8px; text-decoration: none; color: #1a1a2e; font-size: 14px; font-weight: 500; transition: all 0.2s;">{{ tool_b.name }} vs Gusto</a>
+      <a href="/compare/{{ tool_a.slug }}-vs-deel/" style="display:block; padding: 12px 16px; background: #f8f9fb; border: 1px solid #e8eaed; border-radius: 8px; text-decoration: none; color: #1a1a2e; font-size: 14px; font-weight: 500; transition: all 0.2s;">{{ tool_a.name }} vs Deel</a>
+      <a href="/compare/{{ tool_b.slug }}-vs-bamboohr/" style="display:block; padding: 12px 16px; background: #f8f9fb; border: 1px solid #e8eaed; border-radius: 8px; text-decoration: none; color: #1a1a2e; font-size: 14px; font-weight: 500; transition: all 0.2s;">{{ tool_b.name }} vs BambooHR</a>
+      <a href="/" style="display:block; padding: 12px 16px; background: #f8f9fb; border: 1px solid #e8eaed; border-radius: 8px; text-decoration: none; color: #1a1a2e; font-size: 14px; font-weight: 500; transition: all 0.2s;">← All HR Tool Comparisons</a>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-section">
     <h2 style="margin-bottom: 8px;">Ready to decide?</h2>
@@ -342,6 +371,24 @@
     <p style="margin-top: 8px;">We help you pick the right HR tool for your business.</p>
   </div>
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in faqs %}{
+      "@type": "Question",
+      "name": "{{ faq.q | replace('"', '\"') }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.a | replace('"', '\"') }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
 
 </body>
 </html>
