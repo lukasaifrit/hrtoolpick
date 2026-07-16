@@ -346,8 +346,8 @@
     <h2 style="margin-bottom: 8px;">Ready to decide?</h2>
     <p style="color: #666; margin-bottom: 20px; font-size: 15px;">Try both and pick what works best for your team.</p>
     <div class="cta-grid">
-      <a href="{{ tool_a.website }}?ref=hrtoolpick" class="cta-btn cta-primary" rel="nofollow sponsored">Try {{ tool_a.name }}{% if tool_a.pricing.free_trial %} Free{% endif %} →</a>
-      <a href="{{ tool_b.website }}?ref=hrtoolpick" class="cta-btn cta-secondary" rel="nofollow sponsored">Try {{ tool_b.name }}{% if tool_b.pricing.free_trial %} Free{% endif %} →</a>
+      <a href="{% if tool_a.affiliate.link %}{{ tool_a.affiliate.link }}{% else %}{{ tool_a.website }}?ref=hrtoolpick{% endif %}" class="cta-btn cta-primary" rel="nofollow sponsored">Try {{ tool_a.name }}{% if tool_a.pricing.free_trial %} Free{% endif %} →</a>
+      <a href="{% if tool_b.affiliate.link %}{{ tool_b.affiliate.link }}{% else %}{{ tool_b.website }}?ref=hrtoolpick{% endif %}" class="cta-btn cta-secondary" rel="nofollow sponsored">Try {{ tool_b.name }}{% if tool_b.pricing.free_trial %} Free{% endif %} →</a>
     </div>
     <p class="cta-note">* Affiliate disclosure: We may earn a commission if you sign up through our links, at no extra cost to you.</p>
   </section>

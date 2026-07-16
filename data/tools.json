@@ -511,10 +511,11 @@
     "company_size": "1-5000",
     "affiliate": {
       "program": true,
-      "commission_type": "per_lead",
-      "commission_value": 400,
-      "cookie_days": 90,
-      "network": "PartnerStack"
+      "commission_type": "revenue_share",
+      "commission_value": 20,
+      "cookie_days": 365,
+      "network": "Direct (Remote)",
+      "link": "https://hubs.la/Q04pDq0G0"
     },
     "pros": [
       "170+ countries",
