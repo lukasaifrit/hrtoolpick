@@ -2295,5 +2295,1538 @@
     "website": "https://trinet.com",
     "founded": 1988,
     "employees_range": "5000+"
+  },
+  {
+    "id": "paylocity",
+    "name": "Paylocity",
+    "slug": "paylocity",
+    "tagline": "Modern HR and payroll platform for growing businesses",
+    "category": [
+      "payroll",
+      "hr",
+      "engagement"
+    ],
+    "best_for": [
+      "medium business",
+      "50-1000 employees"
+    ],
+    "pricing": {
+      "starting_price": null,
+      "per_employee": null,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": false,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.4,
+      "capterra": 4.3,
+      "review_count": 2400
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "QuickBooks",
+      "Xero",
+      "NetSuite",
+      "Salesforce",
+      "Slack"
+    ],
+    "countries_supported": [
+      "US"
+    ],
+    "company_size": "50-1000",
+    "affiliate": {
+      "program": false,
+      "commission_type": null,
+      "commission_value": null,
+      "cookie_days": null,
+      "network": null,
+      "link": null
+    },
+    "pros": [
+      "Strong employee engagement tools",
+      "Great mobile app",
+      "Modern UI",
+      "Robust analytics"
+    ],
+    "cons": [
+      "US-only",
+      "Quote-based pricing",
+      "Implementation can be complex",
+      "Customer support inconsistent"
+    ],
+    "website": "https://paylocity.com",
+    "founded": 1997,
+    "employees_range": "1000-5000"
+  },
+  {
+    "id": "patriot-payroll",
+    "name": "Patriot Payroll",
+    "slug": "patriot-payroll",
+    "tagline": "Simple, affordable payroll for micro and small businesses",
+    "category": [
+      "payroll"
+    ],
+    "best_for": [
+      "micro business",
+      "small business",
+      "1-25 employees"
+    ],
+    "pricing": {
+      "starting_price": 17,
+      "per_employee": 4,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.8,
+      "capterra": 4.8,
+      "review_count": 3200
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": false,
+      "time_tracking": true,
+      "onboarding": false,
+      "pto_management": false,
+      "contractor_payments": true,
+      "international_payroll": false,
+      "mobile_app": false,
+      "api_access": true
+    },
+    "integrations": [
+      "QuickBooks",
+      "Wave",
+      "Xero"
+    ],
+    "countries_supported": [
+      "US"
+    ],
+    "company_size": "1-100",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 50,
+      "cookie_days": 90,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Cheapest full-service payroll",
+      "Highest rated for simplicity",
+      "Great for very small teams",
+      "Free trial available"
+    ],
+    "cons": [
+      "No HR features",
+      "US-only",
+      "No mobile app",
+      "Very basic feature set"
+    ],
+    "website": "https://patriotsoftware.com",
+    "founded": 2002,
+    "employees_range": "200-500"
+  },
+  {
+    "id": "workforce-now-adp",
+    "name": "ADP TotalSource",
+    "slug": "adp-totalsource",
+    "tagline": "Full-service PEO for small and medium businesses",
+    "category": [
+      "peo",
+      "payroll",
+      "hr",
+      "benefits"
+    ],
+    "best_for": [
+      "small business",
+      "medium business",
+      "PEO seekers",
+      "10-1000 employees"
+    ],
+    "pricing": {
+      "starting_price": null,
+      "per_employee": null,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": false,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.2,
+      "capterra": 4.3,
+      "review_count": 800
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "QuickBooks",
+      "Xero",
+      "Microsoft 365"
+    ],
+    "countries_supported": [
+      "US"
+    ],
+    "company_size": "10-1000",
+    "affiliate": {
+      "program": false,
+      "commission_type": null,
+      "commission_value": null,
+      "cookie_days": null,
+      "network": null,
+      "link": null
+    },
+    "pros": [
+      "Fortune 500 benefits access",
+      "Full PEO services",
+      "Strong compliance",
+      "Trusted ADP brand"
+    ],
+    "cons": [
+      "US-only",
+      "Quote pricing",
+      "Long contracts",
+      "Complex exit process"
+    ],
+    "website": "https://adp.com/totalsource",
+    "founded": 1996,
+    "employees_range": "10000+"
+  },
+  {
+    "id": "keka",
+    "name": "Keka HR",
+    "slug": "keka",
+    "tagline": "Modern HR and payroll for Asia-Pacific businesses",
+    "category": [
+      "hr",
+      "payroll",
+      "performance"
+    ],
+    "best_for": [
+      "small business",
+      "medium business",
+      "Asia-Pacific companies",
+      "50-5000 employees"
+    ],
+    "pricing": {
+      "starting_price": 9,
+      "per_employee": 9,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.6,
+      "capterra": 4.6,
+      "review_count": 1100
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Slack",
+      "Google Workspace",
+      "Microsoft 365",
+      "Jira",
+      "Zapier"
+    ],
+    "countries_supported": [
+      "IN",
+      "AE",
+      "SG",
+      "PH",
+      "MY",
+      "US"
+    ],
+    "company_size": "50-5000",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 100,
+      "cookie_days": 60,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Strong for India and Asia-Pacific",
+      "Modern UI",
+      "Good performance management",
+      "Affordable"
+    ],
+    "cons": [
+      "Less known in US/UK",
+      "Limited global payroll",
+      "Fewer integrations than US tools"
+    ],
+    "website": "https://keka.com",
+    "founded": 2015,
+    "employees_range": "500-1000"
+  },
+  {
+    "id": "freshteam",
+    "name": "Freshteam",
+    "slug": "freshteam",
+    "tagline": "Smart HR software by Freshworks for growing teams",
+    "category": [
+      "hr",
+      "recruiting",
+      "onboarding"
+    ],
+    "best_for": [
+      "small business",
+      "startups",
+      "1-500 employees"
+    ],
+    "pricing": {
+      "starting_price": 1,
+      "per_employee": 1,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": true
+    },
+    "ratings": {
+      "g2": 4.4,
+      "capterra": 4.4,
+      "review_count": 700
+    },
+    "features": {
+      "payroll_processing": false,
+      "tax_filing": false,
+      "direct_deposit": false,
+      "benefits_admin": false,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Slack",
+      "Google Workspace",
+      "LinkedIn",
+      "Indeed",
+      "Freshdesk"
+    ],
+    "countries_supported": [
+      "US",
+      "UK",
+      "AU",
+      "IN",
+      "50+ countries"
+    ],
+    "company_size": "1-500",
+    "affiliate": {
+      "program": true,
+      "commission_type": "recurring",
+      "commission_value": 15,
+      "cookie_days": 90,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Very affordable free plan",
+      "Great ATS features",
+      "Easy to use",
+      "Part of Freshworks ecosystem"
+    ],
+    "cons": [
+      "No payroll",
+      "Limited for larger companies",
+      "Basic benefits management"
+    ],
+    "website": "https://freshworks.com/hrms",
+    "founded": 2017,
+    "employees_range": "5000+"
+  },
+  {
+    "id": "lattice",
+    "name": "Lattice",
+    "slug": "lattice",
+    "tagline": "People management platform for performance and growth",
+    "category": [
+      "performance",
+      "hr",
+      "engagement"
+    ],
+    "best_for": [
+      "medium business",
+      "startups",
+      "50-1000 employees"
+    ],
+    "pricing": {
+      "starting_price": 11,
+      "per_employee": 11,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": false,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.7,
+      "capterra": 4.5,
+      "review_count": 3900
+    },
+    "features": {
+      "payroll_processing": false,
+      "tax_filing": false,
+      "direct_deposit": false,
+      "benefits_admin": false,
+      "time_tracking": false,
+      "onboarding": true,
+      "pto_management": false,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Slack",
+      "Google Workspace",
+      "BambooHR",
+      "Workday",
+      "Rippling",
+      "Greenhouse"
+    ],
+    "countries_supported": [
+      "US",
+      "UK",
+      "CA",
+      "AU",
+      "Global"
+    ],
+    "company_size": "50-5000",
+    "affiliate": {
+      "program": false,
+      "commission_type": null,
+      "commission_value": null,
+      "cookie_days": null,
+      "network": null,
+      "link": null
+    },
+    "pros": [
+      "Best-in-class performance reviews",
+      "Great OKR tracking",
+      "Strong engagement surveys",
+      "Integrates with most HRIS"
+    ],
+    "cons": [
+      "No payroll",
+      "Expensive for small teams",
+      "Not a full HRIS"
+    ],
+    "website": "https://lattice.com",
+    "founded": 2015,
+    "employees_range": "500-1000"
+  },
+  {
+    "id": "workable",
+    "name": "Workable",
+    "slug": "workable",
+    "tagline": "All-in-one recruiting and HR software",
+    "category": [
+      "recruiting",
+      "hr",
+      "onboarding"
+    ],
+    "best_for": [
+      "small business",
+      "medium business",
+      "hiring-focused teams",
+      "10-500 employees"
+    ],
+    "pricing": {
+      "starting_price": 189,
+      "per_employee": null,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.6,
+      "capterra": 4.4,
+      "review_count": 1800
+    },
+    "features": {
+      "payroll_processing": false,
+      "tax_filing": false,
+      "direct_deposit": false,
+      "benefits_admin": false,
+      "time_tracking": false,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Slack",
+      "Google Workspace",
+      "LinkedIn",
+      "Indeed",
+      "BambooHR",
+      "Gusto"
+    ],
+    "countries_supported": [
+      "US",
+      "UK",
+      "CA",
+      "AU",
+      "Global"
+    ],
+    "company_size": "10-500",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 100,
+      "cookie_days": 60,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Best ATS for SMBs",
+      "AI-powered sourcing",
+      "Easy job posting",
+      "Great candidate experience"
+    ],
+    "cons": [
+      "No payroll",
+      "Per-job pricing can add up",
+      "Limited HR features beyond recruiting"
+    ],
+    "website": "https://workable.com",
+    "founded": 2012,
+    "employees_range": "200-500"
+  },
+  {
+    "id": "greenhouse",
+    "name": "Greenhouse",
+    "slug": "greenhouse",
+    "tagline": "Enterprise recruiting software for structured hiring",
+    "category": [
+      "recruiting",
+      "hr"
+    ],
+    "best_for": [
+      "medium business",
+      "enterprise",
+      "100-10000 employees"
+    ],
+    "pricing": {
+      "starting_price": null,
+      "per_employee": null,
+      "currency": "USD",
+      "billing": "annual",
+      "free_trial": false,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.4,
+      "capterra": 4.5,
+      "review_count": 1600
+    },
+    "features": {
+      "payroll_processing": false,
+      "tax_filing": false,
+      "direct_deposit": false,
+      "benefits_admin": false,
+      "time_tracking": false,
+      "onboarding": true,
+      "pto_management": false,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Slack",
+      "LinkedIn",
+      "BambooHR",
+      "Workday",
+      "Rippling",
+      "Deel"
+    ],
+    "countries_supported": [
+      "US",
+      "UK",
+      "CA",
+      "AU",
+      "Global"
+    ],
+    "company_size": "100-10000",
+    "affiliate": {
+      "program": false,
+      "commission_type": null,
+      "commission_value": null,
+      "cookie_days": null,
+      "network": null,
+      "link": null
+    },
+    "pros": [
+      "Best structured hiring process",
+      "Deep analytics",
+      "Strong integrations",
+      "Excellent for scaling teams"
+    ],
+    "cons": [
+      "Expensive",
+      "No payroll",
+      "Complex to configure",
+      "Overkill for small teams"
+    ],
+    "website": "https://greenhouse.com",
+    "founded": 2012,
+    "employees_range": "500-1000"
+  },
+  {
+    "id": "gusto-international",
+    "name": "Rippling PEO",
+    "slug": "rippling-peo",
+    "tagline": "PEO services with the power of Rippling's unified platform",
+    "category": [
+      "peo",
+      "hr",
+      "payroll",
+      "benefits"
+    ],
+    "best_for": [
+      "small business",
+      "medium business",
+      "PEO seekers",
+      "10-500 employees"
+    ],
+    "pricing": {
+      "starting_price": null,
+      "per_employee": null,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": false,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.8,
+      "capterra": 4.9,
+      "review_count": 800
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": true,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Slack",
+      "Google Workspace",
+      "Greenhouse",
+      "Lever",
+      "Salesforce"
+    ],
+    "countries_supported": [
+      "US"
+    ],
+    "company_size": "10-500",
+    "affiliate": {
+      "program": false,
+      "commission_type": null,
+      "commission_value": null,
+      "cookie_days": null,
+      "network": null,
+      "link": null
+    },
+    "pros": [
+      "Best PEO tech platform",
+      "Fortune 500 benefits",
+      "Unified HR+IT",
+      "Fast setup"
+    ],
+    "cons": [
+      "US-only PEO",
+      "Expensive",
+      "No public pricing"
+    ],
+    "website": "https://rippling.com/peo",
+    "founded": 2019,
+    "employees_range": "1000-5000"
+  },
+  {
+    "id": "paychex-flex",
+    "name": "Paychex Flex",
+    "slug": "paychex-flex-hr",
+    "tagline": "Flexible payroll and HR for businesses of all sizes",
+    "category": [
+      "payroll",
+      "hr"
+    ],
+    "best_for": [
+      "small business",
+      "1-49 employees"
+    ],
+    "pricing": {
+      "starting_price": 39,
+      "per_employee": 5,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": false,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.2,
+      "capterra": 4.2,
+      "review_count": 1600
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": false,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "QuickBooks",
+      "Xero",
+      "Point of Sale"
+    ],
+    "countries_supported": [
+      "US"
+    ],
+    "company_size": "1-49",
+    "affiliate": {
+      "program": false,
+      "commission_type": null,
+      "commission_value": null,
+      "cookie_days": null,
+      "network": null,
+      "link": null
+    },
+    "pros": [
+      "Trusted brand",
+      "Strong compliance",
+      "Good for 1-49 employees"
+    ],
+    "cons": [
+      "US-only",
+      "Outdated UI",
+      "Extra fees"
+    ],
+    "website": "https://paychex.com/payroll/paychex-flex",
+    "founded": 1990,
+    "employees_range": "10000+"
+  },
+  {
+    "id": "homebase",
+    "name": "Homebase",
+    "slug": "homebase",
+    "tagline": "Scheduling, time tracking and payroll for hourly workers",
+    "category": [
+      "payroll",
+      "time-tracking",
+      "scheduling"
+    ],
+    "best_for": [
+      "small business",
+      "retail",
+      "restaurants",
+      "hourly workers",
+      "1-100 employees"
+    ],
+    "pricing": {
+      "starting_price": 0,
+      "per_employee": 0,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": true
+    },
+    "ratings": {
+      "g2": 4.3,
+      "capterra": 4.6,
+      "review_count": 1100
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": false,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Square",
+      "Clover",
+      "Toast",
+      "QuickBooks",
+      "Gusto"
+    ],
+    "countries_supported": [
+      "US",
+      "CA"
+    ],
+    "company_size": "1-100",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 50,
+      "cookie_days": 30,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Free plan available",
+      "Best for hourly/shift workers",
+      "Great scheduling",
+      "Easy mobile app"
+    ],
+    "cons": [
+      "Limited for salaried employees",
+      "US and Canada only",
+      "Basic HR features"
+    ],
+    "website": "https://joinhomebase.com",
+    "founded": 2012,
+    "employees_range": "200-500"
+  },
+  {
+    "id": "rippling-global",
+    "name": "Borderless AI",
+    "slug": "borderless-ai",
+    "tagline": "AI-powered global EOR and payroll in 170+ countries",
+    "category": [
+      "global-payroll",
+      "eor",
+      "contractor"
+    ],
+    "best_for": [
+      "startups",
+      "remote teams",
+      "global hiring",
+      "AI-forward companies"
+    ],
+    "pricing": {
+      "starting_price": 39,
+      "per_employee": 39,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": false,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.7,
+      "capterra": 4.8,
+      "review_count": 180
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": false,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": true,
+      "international_payroll": true,
+      "mobile_app": false,
+      "api_access": true
+    },
+    "integrations": [
+      "BambooHR",
+      "Workday",
+      "Greenhouse"
+    ],
+    "countries_supported": [
+      "170+ countries"
+    ],
+    "company_size": "1-5000",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 200,
+      "cookie_days": 90,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "AI-powered onboarding",
+      "170+ countries",
+      "Fast setup",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Very new platform",
+      "No mobile app",
+      "Limited track record"
+    ],
+    "website": "https://www.borderlessai.com",
+    "founded": 2022,
+    "employees_range": "50-200"
+  },
+  {
+    "id": "deel-hr",
+    "name": "Velocity Global",
+    "slug": "velocity-global",
+    "tagline": "Global employment platform for enterprise teams",
+    "category": [
+      "global-payroll",
+      "eor",
+      "hr"
+    ],
+    "best_for": [
+      "enterprise",
+      "medium business",
+      "global companies",
+      "100+ employees"
+    ],
+    "pricing": {
+      "starting_price": null,
+      "per_employee": null,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": false,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.5,
+      "capterra": 4.4,
+      "review_count": 350
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": false,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": true,
+      "international_payroll": true,
+      "mobile_app": false,
+      "api_access": true
+    },
+    "integrations": [
+      "Workday",
+      "SAP",
+      "Oracle",
+      "BambooHR"
+    ],
+    "countries_supported": [
+      "185+ countries"
+    ],
+    "company_size": "100-50000",
+    "affiliate": {
+      "program": false,
+      "commission_type": null,
+      "commission_value": null,
+      "cookie_days": null,
+      "network": null,
+      "link": null
+    },
+    "pros": [
+      "185+ countries",
+      "Strong enterprise support",
+      "Comprehensive EOR",
+      "Good compliance tools"
+    ],
+    "cons": [
+      "Expensive",
+      "No public pricing",
+      "Better for enterprise than SMB"
+    ],
+    "website": "https://velocityglobal.com",
+    "founded": 2014,
+    "employees_range": "1000-5000"
+  },
+  {
+    "id": "bambee",
+    "name": "Bambee",
+    "slug": "bambee",
+    "tagline": "Dedicated HR manager for small businesses from $99/mo",
+    "category": [
+      "hr",
+      "compliance"
+    ],
+    "best_for": [
+      "micro business",
+      "small business",
+      "1-500 employees"
+    ],
+    "pricing": {
+      "starting_price": 99,
+      "per_employee": null,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": false,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.3,
+      "capterra": 4.5,
+      "review_count": 400
+    },
+    "features": {
+      "payroll_processing": false,
+      "tax_filing": false,
+      "direct_deposit": false,
+      "benefits_admin": false,
+      "time_tracking": false,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": false
+    },
+    "integrations": [
+      "Gusto",
+      "QuickBooks"
+    ],
+    "countries_supported": [
+      "US"
+    ],
+    "company_size": "1-500",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 150,
+      "cookie_days": 45,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Dedicated HR manager included",
+      "Affordable for small biz",
+      "Great for compliance",
+      "Easy setup"
+    ],
+    "cons": [
+      "No payroll",
+      "US only",
+      "No API",
+      "Limited self-service features"
+    ],
+    "website": "https://bambee.com",
+    "founded": 2016,
+    "employees_range": "50-200"
+  },
+  {
+    "id": "humi",
+    "name": "Humi",
+    "slug": "humi",
+    "tagline": "All-in-one HR, payroll and benefits for Canadian businesses",
+    "category": [
+      "hr",
+      "payroll",
+      "benefits"
+    ],
+    "best_for": [
+      "Canadian businesses",
+      "small business",
+      "medium business",
+      "1-500 employees"
+    ],
+    "pricing": {
+      "starting_price": 6,
+      "per_employee": 6,
+      "currency": "CAD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.3,
+      "capterra": 4.4,
+      "review_count": 300
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Slack",
+      "Google Workspace",
+      "QuickBooks"
+    ],
+    "countries_supported": [
+      "CA"
+    ],
+    "company_size": "1-500",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 100,
+      "cookie_days": 60,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Built for Canada",
+      "Great ROE and T4 filing",
+      "Bilingual (EN/FR)",
+      "Affordable"
+    ],
+    "cons": [
+      "Canada only",
+      "Smaller integration list",
+      "Less known globally"
+    ],
+    "website": "https://humi.ca",
+    "founded": 2016,
+    "employees_range": "50-200"
+  },
+  {
+    "id": "employment-hero",
+    "name": "Employment Hero",
+    "slug": "employment-hero",
+    "tagline": "All-in-one HR platform for Australian and UK businesses",
+    "category": [
+      "hr",
+      "payroll",
+      "benefits",
+      "recruiting"
+    ],
+    "best_for": [
+      "Australian businesses",
+      "UK businesses",
+      "small business",
+      "1-200 employees"
+    ],
+    "pricing": {
+      "starting_price": 8,
+      "per_employee": 8,
+      "currency": "AUD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.3,
+      "capterra": 4.4,
+      "review_count": 900
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Xero",
+      "MYOB",
+      "QuickBooks",
+      "Slack",
+      "Google Workspace"
+    ],
+    "countries_supported": [
+      "AU",
+      "NZ",
+      "UK",
+      "SG",
+      "MY"
+    ],
+    "company_size": "1-200",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 100,
+      "cookie_days": 60,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Best for Australia and NZ",
+      "Modern UI",
+      "Strong compliance tools",
+      "Great onboarding"
+    ],
+    "cons": [
+      "Limited global payroll",
+      "Less known in US market"
+    ],
+    "website": "https://employmenthero.com",
+    "founded": 2014,
+    "employees_range": "200-500"
+  },
+  {
+    "id": "deputy",
+    "name": "Deputy",
+    "slug": "deputy",
+    "tagline": "Workforce management for shift-based businesses",
+    "category": [
+      "scheduling",
+      "time-tracking",
+      "payroll"
+    ],
+    "best_for": [
+      "retail",
+      "hospitality",
+      "healthcare",
+      "hourly workers",
+      "1-500 employees"
+    ],
+    "pricing": {
+      "starting_price": 4,
+      "per_employee": 4,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.6,
+      "capterra": 4.6,
+      "review_count": 700
+    },
+    "features": {
+      "payroll_processing": false,
+      "tax_filing": false,
+      "direct_deposit": false,
+      "benefits_admin": false,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Gusto",
+      "ADP",
+      "QuickBooks",
+      "Square",
+      "Xero",
+      "Rippling"
+    ],
+    "countries_supported": [
+      "US",
+      "AU",
+      "UK",
+      "CA"
+    ],
+    "company_size": "1-500",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 75,
+      "cookie_days": 30,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Best shift scheduling",
+      "Strong mobile app",
+      "Good integrations",
+      "Affordable"
+    ],
+    "cons": [
+      "No payroll processing",
+      "Not a full HRIS",
+      "Best for hourly workers only"
+    ],
+    "website": "https://deputy.com",
+    "founded": 2008,
+    "employees_range": "200-500"
+  },
+  {
+    "id": "sprout-hr",
+    "name": "Sprout Solutions",
+    "slug": "sprout-solutions",
+    "tagline": "HR and payroll platform for Philippine businesses",
+    "category": [
+      "hr",
+      "payroll"
+    ],
+    "best_for": [
+      "Philippine businesses",
+      "small business",
+      "medium business"
+    ],
+    "pricing": {
+      "starting_price": null,
+      "per_employee": 3,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.5,
+      "capterra": 4.6,
+      "review_count": 250
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": true,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Slack",
+      "Google Workspace",
+      "QuickBooks"
+    ],
+    "countries_supported": [
+      "PH"
+    ],
+    "company_size": "10-5000",
+    "affiliate": {
+      "program": false,
+      "commission_type": null,
+      "commission_value": null,
+      "cookie_days": null,
+      "network": null,
+      "link": null
+    },
+    "pros": [
+      "Built for Philippines compliance",
+      "SSS/PhilHealth/Pag-IBIG auto-compute",
+      "Local support",
+      "Affordable"
+    ],
+    "cons": [
+      "Philippines only",
+      "Limited global features"
+    ],
+    "website": "https://sprout.ph",
+    "founded": 2015,
+    "employees_range": "200-500"
+  },
+  {
+    "id": "sesame-hr",
+    "name": "Sesame HR",
+    "slug": "sesame-hr",
+    "tagline": "Simple HR software for Spanish and Latin American businesses",
+    "category": [
+      "hr",
+      "time-tracking",
+      "payroll"
+    ],
+    "best_for": [
+      "Spanish businesses",
+      "Latin American companies",
+      "1-500 employees"
+    ],
+    "pricing": {
+      "starting_price": 4,
+      "per_employee": 4,
+      "currency": "EUR",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.5,
+      "capterra": 4.6,
+      "review_count": 400
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": false,
+      "benefits_admin": true,
+      "time_tracking": true,
+      "onboarding": true,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "Slack",
+      "Google Workspace",
+      "Zapier"
+    ],
+    "countries_supported": [
+      "ES",
+      "MX",
+      "CO",
+      "AR",
+      "PE",
+      "CL"
+    ],
+    "company_size": "1-500",
+    "affiliate": {
+      "program": true,
+      "commission_type": "per_lead",
+      "commission_value": 80,
+      "cookie_days": 60,
+      "network": "Direct",
+      "link": null
+    },
+    "pros": [
+      "Built for Spain and LATAM",
+      "Affordable",
+      "Good time tracking",
+      "Easy to use"
+    ],
+    "cons": [
+      "Limited outside Spanish-speaking markets",
+      "No global payroll"
+    ],
+    "website": "https://sesamehr.com",
+    "founded": 2019,
+    "employees_range": "50-200"
+  },
+  {
+    "id": "workforce-com",
+    "name": "Workforce.com",
+    "slug": "workforce-com",
+    "tagline": "Compliance-first workforce management for shift workers",
+    "category": [
+      "scheduling",
+      "time-tracking",
+      "payroll",
+      "compliance"
+    ],
+    "best_for": [
+      "retail",
+      "healthcare",
+      "hospitality",
+      "shift-based businesses"
+    ],
+    "pricing": {
+      "starting_price": 4,
+      "per_employee": 4,
+      "currency": "USD",
+      "billing": "monthly",
+      "free_trial": true,
+      "free_plan": false
+    },
+    "ratings": {
+      "g2": 4.7,
+      "capterra": 4.8,
+      "review_count": 220
+    },
+    "features": {
+      "payroll_processing": true,
+      "tax_filing": true,
+      "direct_deposit": true,
+      "benefits_admin": false,
+      "time_tracking": true,
+      "onboarding": false,
+      "pto_management": true,
+      "contractor_payments": false,
+      "international_payroll": false,
+      "mobile_app": true,
+      "api_access": true
+    },
+    "integrations": [
+      "QuickBooks",
+      "ADP",
+      "Rippling",
+      "Gusto",
+      "Xero"
+    ],
+    "countries_supported": [
+      "US",
+      "AU",
+      "UK",
+      "CA"
+    ],
+    "company_size": "10-5000",
+    "affiliate": {
+      "program": false,
+      "commission_type": null,
+      "commission_value": null,
+      "cookie_days": null,
+      "network": null,
+      "link": null
+    },
+    "pros": [
+      "Strong compliance automation",
+      "Great for shift workers",
+      "Payroll built-in",
+      "Strong audit logs"
+    ],
+    "cons": [
+      "Not ideal for office workers",
+      "Limited HR features",
+      "Niche use case"
+    ],
+    "website": "https://workforce.com",
+    "founded": 2012,
+    "employees_range": "50-200"
   }
 ]
