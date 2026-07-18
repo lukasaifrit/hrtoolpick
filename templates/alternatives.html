@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ tool.name }} Alternatives ({{ year }}) — Best {{ tool.name }} Competitors Compared</title>
+  <meta name="description" content="Looking for {{ tool.name }} alternatives in {{ year }}? We compared the {{ alternatives|length }} best {{ tool.name }} competitors on pricing, features, and ratings. Find the right HR software for your business.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hrtoolpick.com/alternatives/{{ tool.slug }}/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ tool.name }} Alternatives {{ year }} — Top {{ alternatives|length }} Competitors">
+  <meta property="og:description" content="Best {{ tool.name }} alternatives compared: pricing, features, ratings. Find the right HR software for your team.">
+  <meta property="og:url" content="https://hrtoolpick.com/alternatives/{{ tool.slug }}/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HRToolPick">
+  <meta property="og:image" content="https://hrtoolpick.com/icons/icon-512.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ tool.name }} Alternatives {{ year }}">
+  <meta name="twitter:description" content="Compare {{ alternatives|length }} alternatives to {{ tool.name }}. Find the best HR software for your team.">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ tool.name }} Alternatives in {{ year }}: Best {{ alternatives|length }} Competitors",
+    "dateModified": "{{ year }}-{{ month_num }}-01",
+    "author": { "@type": "Organization", "name": "HRToolPick" }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best alternative to {{ tool.name }}?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best {{ tool.name }} alternative depends on your needs. {{ alternatives[0].name }} is a top choice for {{ alternatives[0].best_for|join(', ') }}, while {{ alternatives[1].name }} is great for {{ alternatives[1].best_for|join(', ') }}."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do people look for {{ tool.name }} alternatives?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common reasons include pricing concerns, missing features, scaling needs, or looking for better international payroll support. Our comparison covers the top alternatives across all these criteria."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free alternative to {{ tool.name }}?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{% set free_alts = alternatives|selectattr('pricing.free_plan')|list %}{% if free_alts %}Yes, {{ free_alts[0].name }} offers a free plan{% if free_alts|length > 1 %} and so does {{ free_alts[1].name }}{% endif %}.{% else %}Most {{ tool.name }} alternatives offer free trials rather than free plans. Check each tool's pricing page for current offers.{% endif %}"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY0HMNDMS1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HY0HMNDMS1');
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#0d1b2a">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0d1b2a; --navy-mid: #1a2f47;
+      --accent: #3b82f6; --accent-light: #60a5fa;
+      --text: #1a1a2e; --text-muted: #555; --text-dim: #888;
+      --border: #e8eaed; --card-bg: #fff;
+      --green: #28a745; --red: #dc3545; --gold: #f0a500;
+      --radius: 10px;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fb; color: var(--text); line-height: 1.6; }
+
+    /* HEADER */
+    .site-header { background: #fff; border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .logo { font-size: 18px; font-weight: 800; text-decoration: none; color: var(--text); }
+    .logo span { color: var(--accent); }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; padding: 6px 12px; border-radius: 6px; }
+    nav a:hover { background: #f0f2f5; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #1a2f47 0%, #0d1b2a 100%); color: #fff; padding: 52px 24px 44px; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(96,165,250,0.15); border: 1px solid rgba(96,165,250,0.3); color: #60a5fa; font-size: 13px; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; }
+    .hero h1 { font-size: clamp(24px, 4vw, 40px); font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; }
+    .hero p { font-size: 17px; opacity: 0.85; max-width: 580px; margin: 0 auto; }
+
+    /* CONTAINER */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* QUICK ANSWER */
+    .quick-answer { background: #fffbeb; border-left: 4px solid #f0a500; padding: 16px 20px; margin: 32px 0; border-radius: 0 8px 8px 0; font-size: 15px; }
+    .quick-answer strong { color: #856404; }
+
+    /* SECTION */
+    .section { padding: 40px 0 20px; }
+    .section h2 { font-size: 22px; font-weight: 700; margin-bottom: 20px; color: var(--text); }
+
+    /* ALTERNATIVES GRID */
+    .alt-list { display: flex; flex-direction: column; gap: 16px; }
+    .alt-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: start; transition: box-shadow 0.2s; }
+    .alt-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .alt-rank { font-size: 22px; font-weight: 800; color: var(--accent); width: 32px; text-align: center; padding-top: 4px; }
+    .alt-initial { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: #fff; flex-shrink: 0; }
+    .alt-header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+    .alt-name { font-size: 18px; font-weight: 700; }
+    .alt-tagline { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
+    .alt-rating { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--gold); font-weight: 600; }
+    .alt-rating span { color: var(--text-dim); font-weight: 400; }
+    .alt-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+    .badge { font-size: 11px; padding: 3px 9px; border-radius: 20px; border: 1px solid var(--border); color: var(--text-dim); }
+    .badge.green { color: #155724; border-color: #c3e6cb; background: #d4edda; }
+    .badge.blue { color: #004085; border-color: #b8daff; background: #cce5ff; }
+    .alt-cta { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; flex-shrink: 0; }
+    .btn-try { display: inline-block; padding: 10px 20px; background: var(--accent); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; }
+    .btn-try:hover { background: #2563eb; }
+    .btn-compare { display: inline-block; padding: 8px 16px; background: #f0f2f5; color: var(--text); text-decoration: none; border-radius: 8px; font-size: 13px; white-space: nowrap; }
+    .alt-why { font-size: 13px; background: #f8f9fb; border-radius: 8px; padding: 10px 14px; margin-top: 10px; color: var(--text-muted); }
+    .alt-why strong { color: var(--text); }
+
+    /* COMPARISON TABLE */
+    .compare-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); font-size: 14px; }
+    .compare-table th { background: var(--navy); color: #fff; padding: 12px 16px; text-align: left; }
+    .compare-table td { padding: 11px 16px; border-bottom: 1px solid #f0f2f5; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:hover td { background: #f8f9fb; }
+    .check { color: var(--green); }
+    .cross { color: var(--red); }
+
+    /* FAQ */
+    .faq-item { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+    .faq-item h3 { font-size: 15px; margin-bottom: 8px; }
+    .faq-item p { font-size: 14px; color: var(--text-muted); }
+
+    /* FOOTER */
+    footer { background: #1a2f47; color: #aaa; padding: 32px 24px; text-align: center; margin-top: 60px; }
+    footer .logo { color: #fff; }
+    .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 12px 0; }
+    .footer-links a { color: #aaa; text-decoration: none; font-size: 13px; }
+    .footer-copy { font-size: 12px; margin-top: 8px; }
+
+    @media (max-width: 700px) {
+      .alt-card { grid-template-columns: auto 1fr; }
+      .alt-cta { flex-direction: row; align-items: center; grid-column: 1 / -1; }
+      .hero h1 { font-size: 24px; }
+      .container { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="/">HR<span>ToolPick</span></a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#compare">Comparisons</a>
+      <a href="/#tools">All Tools</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-badge">Updated {{ month }} {{ year }}</div>
+  <h1>Best {{ tool.name }} Alternatives in {{ year }}</h1>
+  <p>We compared {{ alternatives|length }} top alternatives to {{ tool.name }} on pricing, features, and real user ratings — so you don't have to.</p>
+</section>
+
+<div class="container">
+
+  <div class="quick-answer">
+    <strong>Quick answer:</strong> {{ quick_answer }}
+  </div>
+
+  <!-- ALTERNATIVES LIST -->
+  <section class="section">
+    <h2>Top {{ alternatives|length }} {{ tool.name }} Alternatives Ranked</h2>
+    <div class="alt-list">
+      {% for alt in alternatives %}
+      <div class="alt-card">
+        <div class="alt-rank">#{{ loop.index }}</div>
+        <div>
+          <div class="alt-header">
+            <div class="alt-initial" style="background:{{ alt_colors[alt.slug] }}">{{ alt.name[0] }}</div>
+            <div>
+              <div class="alt-name">{{ alt.name }}</div>
+              <div class="alt-rating">★ {{ alt.ratings.g2 }} <span>G2 · {{ "{:,}".format(alt.ratings.review_count) }} reviews</span></div>
+            </div>
+          </div>
+          <div class="alt-tagline">{{ alt.tagline }}</div>
+          <div class="alt-badges">
+            {% if alt.pricing.free_plan %}<span class="badge green">Free plan</span>{% endif %}
+            {% if alt.pricing.free_trial %}<span class="badge green">Free trial</span>{% endif %}
+            {% if alt.pricing.starting_price %}<span class="badge">From ${{ alt.pricing.starting_price }}/mo</span>{% endif %}
+            {% if not alt.pricing.starting_price and not alt.pricing.free_plan %}<span class="badge">Custom pricing</span>{% endif %}
+            {% if alt.features.international_payroll %}<span class="badge blue">Global payroll</span>{% endif %}
+          </div>
+          <div class="alt-why"><strong>Why choose {{ alt.name }}:</strong> {{ why_choose[alt.slug] }}</div>
+        </div>
+        <div class="alt-cta">
+          <a href="{% if alt.affiliate.link %}{{ alt.affiliate.link }}{% else %}{{ alt.website }}?ref=hrtoolpick{% endif %}" class="btn-try" rel="nofollow sponsored">Try {{ alt.name }} {% if alt.pricing.free_trial %}Free {% endif %}→</a>
+          <a href="/compare/{{ tool.slug }}-vs-{{ alt.slug }}/" class="btn-compare">Compare ↗</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- FEATURE COMPARISON TABLE -->
+  <section class="section">
+    <h2>Feature Comparison: {{ tool.name }} vs Alternatives</h2>
+    <div style="overflow-x: auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Payroll</th>
+            <th>Global</th>
+            <th>Free Trial</th>
+            <th>Starting Price</th>
+            <th>G2 Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f0f7ff;">
+            <td><strong>{{ tool.name }} (current)</strong></td>
+            <td>{% if tool.features.payroll_processing %}<span class="check">✓</span>{% else %}<span class="cross">✗</span>{% endif %}</td>
+            <td>{% if tool.features.international_payroll %}<span class="check">✓</span>{% else %}<span class="cross">✗</span>{% endif %}</td>
+            <td>{% if tool.pricing.free_trial %}<span class="check">✓</span>{% else %}<span class="cross">✗</span>{% endif %}</td>
+            <td>{% if tool.pricing.starting_price %}${{ tool.pricing.starting_price }}/mo{% elif tool.pricing.free_plan %}Free{% else %}Custom{% endif %}</td>
+            <td>{{ tool.ratings.g2 }}/5</td>
+          </tr>
+          {% for alt in alternatives %}
+          <tr>
+            <td><a href="/compare/{{ tool.slug }}-vs-{{ alt.slug }}/" style="color: var(--accent); text-decoration: none;">{{ alt.name }}</a></td>
+            <td>{% if alt.features.payroll_processing %}<span class="check">✓</span>{% else %}<span class="cross">✗</span>{% endif %}</td>
+            <td>{% if alt.features.international_payroll %}<span class="check">✓</span>{% else %}<span class="cross">✗</span>{% endif %}</td>
+            <td>{% if alt.pricing.free_trial or alt.pricing.free_plan %}<span class="check">✓</span>{% else %}<span class="cross">✗</span>{% endif %}</td>
+            <td>{% if alt.pricing.starting_price %}${{ alt.pricing.starting_price }}/mo{% elif alt.pricing.free_plan %}Free{% else %}Custom{% endif %}</td>
+            <td>{{ alt.ratings.g2 }}/5</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the best alternative to {{ tool.name }}?</h3>
+      <p>The best {{ tool.name }} alternative depends on your needs. {{ alternatives[0].name }} is our top pick for {{ alternatives[0].best_for|join(', ') }}, while {{ alternatives[1].name }} is ideal for {{ alternatives[1].best_for|join(', ') }}. Use our comparison table above to find the best fit for your team size and budget.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why do people switch from {{ tool.name }}?</h3>
+      <p>{{ switch_reason }}</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is there a free alternative to {{ tool.name }}?</h3>
+      <p>{% set free_alts = alternatives|selectattr('pricing.free_plan')|list %}{% if free_alts %}Yes — {{ free_alts[0].name }} offers a free plan{% if free_alts|length > 1 %} and {{ free_alts[1].name }} also has a free tier{% endif %}. Both are solid options if you're budget-conscious.{% else %}Most {{ tool.name }} alternatives offer free trials (typically 14–30 days) rather than permanent free plans. Check each vendor's pricing page for current offers.{% endif %}</p>
+    </div>
+    <div class="faq-item">
+      <h3>How much does {{ tool.name }} cost compared to alternatives?</h3>
+      <p>{% if tool.pricing.starting_price %}{{ tool.name }} starts at ${{ tool.pricing.starting_price }}/month{% if tool.pricing.per_employee %} + ${{ tool.pricing.per_employee }}/employee{% endif %}. {% else %}{{ tool.name }} uses custom/quote-based pricing. {% endif %}Alternatives like {{ alternatives[0].name }} {% if alternatives[0].pricing.starting_price %}start at ${{ alternatives[0].pricing.starting_price }}/month{% else %}also use custom pricing{% endif %}. Always verify current pricing directly with each vendor.</p>
+    </div>
+  </section>
+
+  <!-- RELATED COMPARISONS -->
+  <section class="section">
+    <h2>Compare {{ tool.name }} Head-to-Head</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px;">
+      {% for alt in alternatives[:6] %}
+      <a href="/compare/{{ tool.slug }}-vs-{{ alt.slug }}/" style="display:block; padding: 12px 16px; background: #fff; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text); font-size: 14px; font-weight: 500;">
+        {{ tool.name }} vs {{ alt.name }} →
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <a class="logo" href="/">HR<span>ToolPick</span></a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/#compare">Comparisons</a>
+      <a href="/disclosure/">Affiliate Disclosure</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
+    <p class="footer-copy">© {{ year }} HRToolPick · Affiliate disclosure: We may earn a commission if you sign up through our links, at no extra cost to you.</p>
+  </div>
+</footer>
+
+</body>
+</html>
