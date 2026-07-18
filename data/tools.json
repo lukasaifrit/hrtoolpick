@@ -2130,7 +2130,8 @@
       "commission_type": "recurring",
       "commission_value": 15,
       "cookie_days": 90,
-      "network": "Direct"
+      "network": "Zoho Affiliate (Direct)",
+      "link": "https://go.zoho.com/rfp3"
     },
     "pros": [
       "Extremely affordable free plan",
